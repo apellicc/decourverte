@@ -35,13 +35,23 @@
 // 	console.log("ici je vais verifier si le header est bon sinon transfert home");
 //
 // });
+// var express = require('express');
+// var app = express();
+//
+// app.use(express.static(__dirname + '/public'));
+//
+// app.get('/', function(req, res){
+//   res.redirect('/index.html');
+// });
+
+// app.listen(80);
 var express = require('express');
 var app = express();
 var path = require('path');
 
-app.use('/JavaScript', express.static(path.resolve(__dirname + '/../front/JavaScript')));
-app.use('/lib', express.static(path.resolve(__dirname + '/../front/lib')));
+// app.use('/JavaScript', express.static(path.resolve(__dirname + '/../front/JavaScript')));
+// app.use('/lib', express.static(path.resolve(__dirname + '/../front/lib')));
 app.get('/', function (req, res) {
-res.sendfile(path.resolve(__dirname + '/../front/index.html'));
+res.sendFile(path.resolve('../front/index.html'));
 });
 app.listen(3000);
