@@ -1,27 +1,17 @@
-<!-- <!doctype html>
-<html>
-  <head>
-	  <script> console.log("jejeej")</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  </head>
-  <body>
-    <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div>
-  </body>
-</html> -->
+
 <!doctype html>
-<html lang="fr">
-<head>
-<meta Charest="UTF-8">
-<title>Test AngularJS</title>
-<script src="lib/angular.min.js"></script>
-<script src="Javascript/index.js"></script>
-</head>
-<body ng-app>
-<h1 ng-controller="monControl">{{maVariable}}</h1>
-</body>
+<html lang="fr" ng-app="myApp">
+	<head>
+		<meta Charest="UTF-8">
+		<title>Test AngularJS</title>
+
+		<script type='text/javascript' src="/../front/lib/angular.min.js"></script>
+		<script type='text/javascript' src="/../front/app.js" charset="UTF-8"></script>
+		<script type='text/javascript' src="/../front/app/controllerApp.js"></script>
+		<script type='text/javascript' src="/../front/lib/angular-ui-router.min.js" charset="UTF-8"></script>
+
+	</head>
+	<body>
+		<div class="container" ui-view=""></div>
+	</body>
 </html>
