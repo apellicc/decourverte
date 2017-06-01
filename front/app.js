@@ -1,16 +1,11 @@
-'use strict';
+var myApp = angular.module('myApp', ['ui.router']);
 
-angular.module('myApp', [
-  'ui.router'
-]).config(function($stateProvider, $urlRouterProvider) {
-
-    $urlRouterProvider.otherwise('/');
-
-    $stateProvider.state('app', {
-        url: '/',
-        templateUrl: '../front/app/app.html',
-        controller: 'AppCtrl'
-    });
+myApp.config(function($stateProvider) {
+  var index = {
+    url: '/',
+    template: 'app/app.html'
+  }
+  $stateProvider.state(index);
 
 }).run(function () {
 

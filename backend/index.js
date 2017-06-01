@@ -48,10 +48,15 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var url = require('url');
 
-// app.use('/JavaScript', express.static(path.resolve(__dirname + '/../front/JavaScript')));
-// app.use('/lib', express.static(path.resolve(__dirname + '/../front/lib')));
+// app.get('/front/lib/angular.min.js', function (req, res) {
+// 	console.log(req.url);
+// });
+
+app.use(express.static(path.resolve(__dirname + '/../front')));
 app.get('/', function (req, res) {
-res.sendFile(path.resolve('../front/index.html'));
+	console.log(req.url);
+	res.sendFile(path.resolve(__dirname + '/../front/index.html'));
 });
 app.listen(3000);

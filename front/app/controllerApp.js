@@ -1,3 +1,3 @@
-angular.module('myApp').controller('AppCtrl', function($scope) {
+angular.module('myApp').controller('ControllerApp', function($scope) {
 	$scope.maVariable="Hello World !";
 });
